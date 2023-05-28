@@ -113,21 +113,21 @@ The final output of the training represented the culmination of these efforts—
   <img src="media/training.png" alt="Training" style="width: 100%; height: 100%; object-fit: cover;">
 </div>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Action Space
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = "ENTER YOUR API";
-   ```
+The action space in AWS DeepRacer defines the range of actions available for the model to control its movement during the racing simulation. It is typically discrete, meaning the model selects actions from a predefined set of options, such as different steering angles and acceleration levels. The specific configuration of the action space depends on the chosen racing circuit, like the re:Invent 2018 track for the UNSW DeepRacer qualifiers, which features a simple loop circuit with one sharp left turn and two straightforward left turns.
+
+During its training, the model explores various actions in different states and receives feedback in the form of rewards or penalties. This feedback helps the model learn which actions lead to better outcomes and encourages it to prioritize actions with higher rewards or lower penalties. The reward function was customised based on the calculated optimal racing line in [cdthompson's Github Repository](https://github.com/cdthompson/deepracer-k1999-race-lines), which provides an optimal racing line and angles derived from Remi Coulom's PhD Thesis, K1999 Path-Optimization Algorithm.
+
+<div style="display: flex; justify-content: center; align-items: center; width: 80vw;">
+  <img src="media/racingline.png" alt="Optimal Racing Line" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+
+By refining the action space, the model can learn effective racing strategies and adapt to track conditions and the environment. The goal is to strike a balance between exploration and exploitation, allowing the model to explore new actions while leveraging knowledge from previous experiences to make informed decisions.
+
+Designing an appropriate action space is crucial for training an AWS DeepRacer model as it directly influences behavior, performance, and the ability to successfully complete the racing track.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,11 +142,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 
 ## Conclusion
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
