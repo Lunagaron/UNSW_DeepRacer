@@ -97,12 +97,21 @@ The 2023 AWS DeepRacer challenge held at UNSW utilised the 2018 re:Invent circui
 
 ### Hyperparameters
 
-This is an example of how to list things you need to use the software and how to install them.
+Tuning the hyperparameters of the neural network in AWS DeepRacer was crucial to ensure the model's convergence to an optimal and stable state. DeepRacer utilizes advanced reinforcement learning techniques, with the neural network being a key component of the learning algorithm.
 
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
+During the training process, the model underwent iterative updates using a technique known as backpropagation. This technique allowed the neural network to adjust its internal weights and biases based on the calculated error between predicted and actual outputs. By propagating this error back through the network, the model fine-tuned its parameters and improved its performance over time.
+
+In addition to backpropagation, AWS DeepRacer leveraged machine learning principles to facilitate the learning process. Reinforcement learning, a subfield of machine learning, enables the model to learn from interactions with its environment and make decisions that maximize a predefined reward signal. By repeatedly exposing the model to the racing environment and optimizing its actions based on rewards and penalties, the neural network learned effective racing strategies.
+
+To prevent overfitting, which can hinder the generalization of the learned policies, training sessions were limited to a maximum duration of one hour. Overfitting occurs when the model becomes too specialized in the training data, leading to poor performance on new and unseen scenarios. By constraining the training time, AWS DeepRacer sought to strike a balance between capturing important racing patterns and avoiding overfitting, thereby promoting better generalization.
+
+Throughout the training process, the primary objective was to ensure that the model was capable of completing 100% of the track without any of the wheels deviating beyond the circuit boundaries. This criterion ensured that the learned policies resulted in safe and successful racing maneuvers.
+
+The final output of the training represented the culmination of these efforts—an optimized and high-performing model that could successfully navigate the track while adhering to the defined circuit boundaries.
+
+<div style="display: flex; justify-content: center; align-items: center; width: 50vw;">
+  <img src="media/training.png" alt="Training" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
 
 ### Action Space
 
