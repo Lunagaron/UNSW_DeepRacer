@@ -19,7 +19,7 @@
   <p align="center">
     An AWS DeepRacer Competition
     <br />
-    <a href="https://github.com/Lunagaron/UNSW_DeepRacer"><strong>Explore the docs »</strong></a>
+    <a href="https://docs.aws.amazon.com/deepracer/index.html"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/Lunagaron/UNSW_DeepRacer">View Demo</a>
@@ -44,11 +44,11 @@
       <a href="#development">Development</a>
       <ul>
         <li><a href="#hyperparameters">Hyperparameters</a></li>
-        <li><a href="#actionspace">Action Space</a></li>
-        <li><a href="#rewardfunction">Reward Function</a></li>
+        <li><a href="#action-space">Action Space</a></li>
+        <li><a href="#reward-function">Reward Function</a></li>
       </ul>
     </li>
-    <li><a href="#contact">Conclusion</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -124,10 +124,11 @@ During its training, the model explores various actions in different states and 
 <div style="display: flex; justify-content: center; align-items: center; width: 80vw;">
   <img src="media/racingline.png" alt="Optimal Racing Line" style="width: 100%; height: 100%; object-fit: cover;">
 </div>
+</p>
 
-By refining the action space, the model can learn effective racing strategies and adapt to track conditions and the environment. The goal is to strike a balance between exploration and exploitation, allowing the model to explore new actions while leveraging knowledge from previous experiences to make informed decisions.
+Refining and optimizing the action space enables the model to learn effective racing strategies and adapt to varying track conditions and the environment. It aims to find a balance between exploration and exploitation, allowing the model to discover new actions while leveraging knowledge from previous experiences to make informed decisions. This process was often used to tweak cloned models for achieving faster lap times and cleaner racing lines.
 
-Designing an appropriate action space is crucial for training an AWS DeepRacer model as it directly influences behavior, performance, and the ability to successfully complete the racing track.
+Designing an appropriate action space is crucial for training an AWS DeepRacer model as it directly influences behavior, performance, and the ability to successfully complete the racing track. To fetch the coordinates of waypoints for every DeepRacer track, the [AWS DeepRacer Github Repo](https://github.com/aws-deepracer/aws-deepracer-workshops/tree/master/log-analysis) provides comprehensive track information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -139,11 +140,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ROADMAP -->
-
 ## Conclusion
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+Conclusion body paragraph
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
