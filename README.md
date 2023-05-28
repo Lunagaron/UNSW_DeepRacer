@@ -67,7 +67,7 @@
 
 This repository presents a comprehensive overview of the strategy and techniques employed for the AWS DeepRacer event hosted at UNSW in May 2023. The race served as an immersive demonstration experience, showcasing the seamless integration of cloud technology into the future of higher education. It was organized as part of the UNSW and AWS Presents: Innovation in Higher Education Seminar.
 
-### Built With
+#### Built With
 
 - [![Python][Python.shield]][Python.url]
 - [![NumPy][NumPy.shield]][NumPy.url]
@@ -134,23 +134,71 @@ Designing an appropriate action space is crucial for training an AWS DeepRacer m
 
 ### Reward Function
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+In the AWS DeepRacer 2018 re:Invent circuit, the reward function was designed to incentivize the model to stay on the optimal racing line while maintaining a good velocity. The reward function plays a crucial role in reinforcement learning as it guides the model's decision-making process by assigning rewards or penalties based on its actions and current state.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+The goal of the reward function in this scenario was to encourage the model to learn effective racing strategies that prioritize staying on the optimal racing line and maintaining an appropriate velocity. As a rough example:
+
+```
+def reward_function(params):
+    # Get the model's current position and velocity
+    position = params['position']
+    velocity = params['velocity']
+
+    # Define the optimal racing line based on the track
+    optimal_racing_line = get_optimal_racing_line()
+
+    # Define parameters for rewarding and penalizing the model
+    distance_threshold = 0.1  # Threshold for considering the model on the racing line
+    velocity_threshold = 2.0  # Threshold for considering the model's velocity appropriate
+
+    # Calculate the distance of the model's position from the optimal racing line
+    distance_from_line = calculate_distance_from_line(position, optimal_racing_line)
+
+    # Calculate the reward based on the model's distance from the racing line and velocity
+    if distance_from_line < distance_threshold:
+        # Model is on or very close to the racing line
+        reward = 1.0
+    else:
+        # Model is deviating from the racing line
+        reward = 0.0
+
+    if velocity > velocity_threshold:
+        # Model is maintaining an appropriate velocity
+        reward += 0.5
+    else:
+        # Model's velocity is too low
+        reward -= 0.5
+
+    return reward
+```
+
+Optimizing the reward function for the AWS DeepRacer 2018 re:Invent circuit involved fine-tuning the reward weights and thresholds to encourage desirable behaviors. It required experimentation and iterative refinement to strike the right balance. Some strategies to optimize the reward function included:
+
+1. Experimentation: Adjust the reward weights and thresholds to find the optimal balance between staying on the racing line and maintaining velocity.
+
+2. Parameter tuning: Explore different reward weights for different aspects of the racing line and velocity, such as penalizing larger deviations from the line more heavily or rewarding higher velocities more significantly.
+
+3. Training iteration: Continuously train and evaluate the model using different reward function configurations to identify the most effective settings.
+
+4. Data analysis: Analyze the model's performance and behavior during training to identify patterns and areas for improvement. Adjust the reward function accordingly based on insights gained from the analysis.
+
+<div style="display: flex; justify-content: center; align-items: center; width: 80vw;">
+  <img src="media/rewarddistribution.png" alt="Optimal Racing Line" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Conclusion
 
-Conclusion body paragraph
+DeepRacer has proven to be a captivating and thrilling application of machine learning, offering a unique blend of racing excitement and valuable learning opportunities. Engaging in this project during my university holidays was truly a delightful experience. Despite having no prior experience with AWS and DeepRacer, immersing myself in practical reinforcement learning algorithms provided me with a hands-on introduction to this fascinating domain.
+
+In conclusion, DeepRacer has not only brought me immense enjoyment and a sense of fulfillment, but it has also sparked a deep curiosity to further explore the vast potential of the DeepRacer ecosystem. The project has opened my eyes to a world of possibilities, and I eagerly look forward to continuing this journey, expanding my knowledge and skills in this exhilarating field.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Acknowledgments
 
-- []()
-- []()
-- []()
+I would like to acknowledge and thank UNSW and AWS for organising this DeepRacer competition, and sponsoring 40 hours of training our models on AWS SageMaker.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
