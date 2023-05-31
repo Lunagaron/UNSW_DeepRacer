@@ -65,7 +65,7 @@
 
 </br>
 
-This repository presents a comprehensive overview of the strategy and techniques employed for the AWS DeepRacer event hosted at UNSW in May 2023. The race served as an immersive demonstration experience, showcasing the seamless integration of cloud technology into the future of higher education. It was organized as part of the UNSW and AWS Presents: Innovation in Higher Education Seminar.
+This repository presents a comprehensive overview of the strategy and techniques employed for the AWS DeepRacer event hosted at UNSW in May 2023. The race served as an immersive demonstration experience, showcasing the seamless integration of cloud technology into the future of higher education. It was organized as part of an immersive showcase for UNSW and AWS Presents: Innovation in Higher Education Seminar.
 
 #### Built With
 
@@ -80,10 +80,6 @@ This repository presents a comprehensive overview of the strategy and techniques
 <div style="display: flex; justify-content: center; align-items: center; width: 75vw;">
   <img src="media/qualifiers.png" alt="Qualifiers Ranking" style="width: 100%; height: 100%; object-fit: cover;">
 </div>
-
-#### Re:Invent 2018 Circuit In-Person Race (TBD Place)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
