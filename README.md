@@ -5,7 +5,6 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- AWS PROJECT LOGO -->
 <br />
@@ -206,8 +205,6 @@ I would like to acknowledge and thank UNSW and AWS for organising this DeepRacer
 [issues-url]: https://github.com/Lunagaron/UNSW_DeepRacer/issues
 [license-shield]: https://img.shields.io/github/license/Lunagaron/UNSW_DeepRacer.svg?style=for-the-badge
 [license-url]: https://github.com/Lunagaron/UNSW_DeepRacer/blob/main/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/hongliang0
 [Python.shield]: https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white
 [Python.url]: https://www.python.org/
 [NumPy.shield]: https://img.shields.io/badge/-NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white
